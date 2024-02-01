@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Krakozia, Serveur Minecraft, PVP Factions, Launcher">
+    <meta name="author" content="North">
+    <meta name="csrf-token" content="DTVKXu8LuDE73D3y03f6O72My1lA68gUzANkSZpv">
+
+    <link rel="icon" type="image/png" href="https://krakozia.fr/images/favicon.png">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://krakozia.fr/css/app.css">
+        <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <!-- Scripts -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+
+    <script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'DTVKXu8LuDE73D3y03f6O72My1lA68gUzANkSZpv';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+    <title> Accueil — Krakozia</title>
+</head>
+
+<div class="navigation-container">
+
+    <div x-data="{ open: false }">
+        <button @click="open = true" class="custom-button navigation-button navigation-open" type="button">
+            <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#align-justify"></use></svg>
+        </button>
+
+        <div class="navigation-separator"></div>
+        <nav class="mobile-offcanvas navigation navigation-full default-navigation" :class="{ 'mobile-show' : open }">
+
+            <div class="offcanvas-header">
+                <button class="custom-button navigation-button close-button" @click="open = false">
+                    <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#close-small"></use></svg>
+                </button>
+            </div>
+
+            <div class="container">
+                <div class="navigation-collapse justify-content-md-center text-center">
+
+                    <span class="d-lg-none mb-3 mt-3">
+                        <img src="https://krakozia.fr/images/logo.png" class="img-fluid mobile-logo" width="150px" alt="Logo">
+                    </span>
+
+                    <ul class="navigation-column">
+                        <li class="navigation-item">
+                            <a class="navigation-link active" href="https://krakozia.fr">Accueil</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link " href="https://krakozia.fr/join">Jouer</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link " href="https://krakozia.fr/vote">Votes</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link custom-button green " href="https://krakozia.fr/shop">Boutique</a>
+                        </li>
+                    </ul>
+
+                    <a class="logo" href="">
+                        <img src="https://krakozia.fr/images/logo.png" class="logo img-fluid" alt="logo">
+                    </a>
+
+                    <ul class="navigation-column ml-auto">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="https://discord.gg/7n7kBMF" target="_blank">Discord</a>
+                        </li>
+                        <li class="navigation-item desktop-cart">
+                            <div wire:id="sbD1FJnhZayX8ZGjDQqO" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;sbD1FJnhZayX8ZGjDQqO&quot;,&quot;name&quot;:&quot;cart&quot;,&quot;locale&quot;:&quot;fr&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;addProduct&quot;,&quot;cartRemoveProduct&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;70b3f33e&quot;,&quot;data&quot;:{&quot;entries&quot;:[],&quot;count&quot;:0},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;b3ffc5e7089fd218b3b70650dc1a25d7c4d137ae721448c88893360d111ce3cf&quot;}}" class="cart-navigation-container">
+    <div x-data="{ open: false }" @click.away="open = false">
+        <div class="cart" @click="open = !open">
+            <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#shopping-cart"></use></svg>
+            <span>0</span>
+            <svg x-show="open"><use xlink:href="https://krakozia.fr/images/sprite.svg#caret-up"></use></svg>
+            <svg x-show="!open"><use xlink:href="https://krakozia.fr/images/sprite.svg#caret-down"></use></svg>
+        </div>
+
+        <div class="details-dropdown" x-show="open" style="display: none;">
+                            <div class="empty-content">
+                    <span class="message">Votre panier est vide !</span>
+                </div>
+            
+            <div class="summary-container">
+                <a class="custom-button" href="https://krakozia.fr/shop/cart">Voir le panier</a>            </div>
+        </div>
+    </div>
+</div>
+<!-- Livewire Component wire-end:sbD1FJnhZayX8ZGjDQqO -->                        </li>
+                        <li class="navigation-item mobile-cart">
+                            <a class="navigation-link" href="">Panier</a>
+                        </li>
+
+                                                    <li class="navigation-item">
+                                <a class="navigation-link custom-button profile-button logged" href="https://krakozia.fr/profile" @click="open = true">
+                                    M1000
+                                </a>
+                                <div class="profile-avatar">
+                                    <img src="https://krakozia.fr/api/head/M1000" alt="M1000" class="profile-avatar-image">
+                                </div>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<body>
+
+<main>
+        <div class="slider-container">
+        <div class="container">
+            <div class="slider-content">
+                <div class="text-container">
+                    <h2 class="big-title text-gradient-green">Pirate, prépare ton navire et rejoins l'aventure !</h2>
+
+                    <button class="custom-button mt-5">
+                        0 Pirates en ligne
+                    </button>
+
+                    <a href="https://krakozia.fr/auth/register" class="register-link">Créer un nouveau compte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="custom-card big custom-video-card">
+                  <video class="custom-video" src="https://krakozia.fr/videos/trailer.mp4" loop autoplay muted></video>
+              </div>
+            </div>
+        </div>
+
+        <div class="row">
+                            <div class="col-md-4">
+                    <div class="news-container custom-card ">
+    <div class="news-image-container">
+        <div class="zoom-image">
+            <img src="https://krakozia.fr/images/news/AxuHq5Rzq62WoWgJ.jpg" alt="CREATION DE BASE (SPOIL 1)" class="img-fluid" />
+        </div>
+    </div>
+    <div class="news-content-container">
+        <h5 class="news-title">CREATION DE BASE (SPOIL 1)</h5>
+        <p class="news-description">Construisez et protégez aux mieux vos bases de faction grâce aux seaux de pierre et de sable qui...</p>
+    </div>
+    <div class="news-action-container">
+        <a class="custom-button" href="https://krakozia.fr/news/creation-de-base/5"><svg><use xlink:href="https://krakozia.fr/images/sprite.svg#plus"></use></svg>
+            Voir plus</a>    </div>
+</div>                </div>
+                            <div class="col-md-4">
+                    <div class="news-container custom-card ">
+    <div class="news-image-container">
+        <div class="zoom-image">
+            <img src="https://krakozia.fr/images/news/wzwjKSA9jxoebBVY.jpg" alt="Démarrez correctement l&amp;#039;aventure avec votre faction !" class="img-fluid" />
+        </div>
+    </div>
+    <div class="news-content-container">
+        <h5 class="news-title">Démarrez correctement l&#039;aventure avec votre faction !</h5>
+        <p class="news-description">Starter pack pour les factions !Pour obtenir le starter pack, il faut être au minimum 10 connectés dans...</p>
+    </div>
+    <div class="news-action-container">
+        <a class="custom-button" href="https://krakozia.fr/news/obtenez-de-quoi-bien-commencer-votre-aventure-grace-aux-membres-de-votre-factions/3"><svg><use xlink:href="https://krakozia.fr/images/sprite.svg#plus"></use></svg>
+            Voir plus</a>    </div>
+</div>                </div>
+                            <div class="col-md-4">
+                    <div class="news-container custom-card ">
+    <div class="news-image-container">
+        <div class="zoom-image">
+            <img src="https://krakozia.fr/images/news/xFxQCjOGEuLrkiQa.jpg" alt="Ouverture de Krakozia le Samedi 13 Janvier 2024 !" class="img-fluid" />
+        </div>
+    </div>
+    <div class="news-content-container">
+        <h5 class="news-title">Ouverture de Krakozia le Samedi 13 Janvier 2024 !</h5>
+        <p class="news-description">Planning pour l&#039;ouverture du serveur !Ouverture du Minage à 15h00Ouverture du Faction à 16h00N&#039;hésitez pas à installer le...</p>
+    </div>
+    <div class="news-action-container">
+        <a class="custom-button" href="https://krakozia.fr/news/rejoignez-nous-sur-krakozia/2"><svg><use xlink:href="https://krakozia.fr/images/sprite.svg#plus"></use></svg>
+            Voir plus</a>    </div>
+</div>                </div>
+                    </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row justify-content-between">
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">A propos</h2>
+                    <p><strong>Krakozia</strong> est un serveur PVP/Factions en version 1.7.10 proposant un gameplay axé autour du farming ! De nombreux ajouts sont disponibles, <strong>Machines</strong>, <strong>Objets</strong> et bien d'autres !</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">Liens</h2>
+                    <div class="footer-links">
+                        <ul class="list-content">
+                            <li>
+                                <a href="https://krakozia.fr">
+                                    Accueil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/7n7kBMF" target="_blank">
+                                    Discord
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://krakozia.fr/join">
+                                    Nous-rejoindre
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://krakozia.fr/vote">
+                                    Votes
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-content text-right">
+                                                            <li><a href="https://krakozia.fr/page/cgv">
+                                        CGV
+                                    </a>
+                                </li>
+                                                            <li><a href="https://krakozia.fr/page/cgu">
+                                        CGU
+                                    </a>
+                                </li>
+                                                            <li><a href="https://krakozia.fr/page/mentions">
+                                        Mentions légales
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">Boutique</h2>
+                    <p>Oh oh oh ! Pirate ! Il est temps d'utiliser votre or pour conquérir les mers !</p>
+                    <a href="https://krakozia.fr/shop" class="custom-button mt-4">
+                        <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#shopping-bag"></use></svg>
+                        Boutique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container text-center">
+
+            <a href="https://krakozia.fr/" class="mt-5">
+                <img src="https://krakozia.fr/images/logo.png" width="200px" alt="Logo">
+            </a>
+
+            <p class="footer-copy">&copy; 2019 - 2024 Krakozia. Tous droits réservés. Réalisé avec  <svg class="footer-heart"><use xlink:href="https://krakozia.fr/images/sprite.svg#heart"></use></svg></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
