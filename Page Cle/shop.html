@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Krakozia, Serveur Minecraft, PVP Factions, Launcher">
+    <meta name="author" content="North">
+    <meta name="csrf-token" content="ZNtKU96ZMYyoE2ZtGeZjnj3YQGkkYuyNJ2kutxal">
+
+    <link rel="icon" type="image/png" href="https://krakozia.fr/images/favicon.png">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://krakozia.fr/css/app.css">
+        <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
+
+    <!-- Scripts -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+
+    <script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'ZNtKU96ZMYyoE2ZtGeZjnj3YQGkkYuyNJ2kutxal';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+    <title> Boutique — Krakozia</title>
+</head>
+
+<div class="navigation-container">
+
+    <div x-data="{ open: false }">
+        <button @click="open = true" class="custom-button navigation-button navigation-open" type="button">
+            <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#align-justify"></use></svg>
+        </button>
+
+        <div class="navigation-separator"></div>
+        <nav class="mobile-offcanvas navigation navigation-full default-navigation" :class="{ 'mobile-show' : open }">
+
+            <div class="offcanvas-header">
+                <button class="custom-button navigation-button close-button" @click="open = false">
+                    <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#close-small"></use></svg>
+                </button>
+            </div>
+
+            <div class="container">
+                <div class="navigation-collapse justify-content-md-center text-center">
+
+                    <span class="d-lg-none mb-3 mt-3">
+                        <img src="https://krakozia.fr/images/logo.png" class="img-fluid mobile-logo" width="150px" alt="Logo">
+                    </span>
+
+                    <ul class="navigation-column">
+                        <li class="navigation-item">
+                            <a class="navigation-link " href="https://krakozia.fr">Accueil</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link " href="https://krakozia.fr/join">Jouer</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link " href="https://krakozia.fr/vote">Votes</a>
+                        </li>
+
+                        <li class="navigation-item">
+                            <a class="navigation-link custom-button green active" href="https://krakozia.fr/shop">Boutique</a>
+                        </li>
+                    </ul>
+
+                    <a class="logo" href="">
+                        <img src="https://krakozia.fr/images/logo.png" class="logo img-fluid" alt="logo">
+                    </a>
+
+                    <ul class="navigation-column ml-auto">
+                        <li class="navigation-item">
+                            <a class="navigation-link" href="https://discord.gg/7n7kBMF" target="_blank">Discord</a>
+                        </li>
+                        <li class="navigation-item desktop-cart">
+                            <div wire:id="nh7AFjMaXWgKFSLhyVmq" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;nh7AFjMaXWgKFSLhyVmq&quot;,&quot;name&quot;:&quot;cart&quot;,&quot;locale&quot;:&quot;fr&quot;,&quot;path&quot;:&quot;shop&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[&quot;addProduct&quot;,&quot;cartRemoveProduct&quot;]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;70b3f33e&quot;,&quot;data&quot;:{&quot;entries&quot;:[],&quot;count&quot;:0},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;5b8fd443be5ad725a1cbbbd91ef0cbfcdfde53e9d7b5e97a9990a0348b87b12b&quot;}}" class="cart-navigation-container">
+    <div x-data="{ open: false }" @click.away="open = false">
+        <div class="cart" @click="open = !open">
+            <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#shopping-cart"></use></svg>
+            <span>0</span>
+            <svg x-show="open"><use xlink:href="https://krakozia.fr/images/sprite.svg#caret-up"></use></svg>
+            <svg x-show="!open"><use xlink:href="https://krakozia.fr/images/sprite.svg#caret-down"></use></svg>
+        </div>
+
+        <div class="details-dropdown" x-show="open" style="display: none;">
+                            <div class="empty-content">
+                    <span class="message">Votre panier est vide !</span>
+                </div>
+            
+            <div class="summary-container">
+                <a class="custom-button" href="https://krakozia.fr/shop/cart">Voir le panier</a>            </div>
+        </div>
+    </div>
+</div>
+<!-- Livewire Component wire-end:nh7AFjMaXWgKFSLhyVmq -->                        </li>
+                        <li class="navigation-item mobile-cart">
+                            <a class="navigation-link" href="">Panier</a>
+                        </li>
+
+                                                    <li class="navigation-item">
+                                <a class="navigation-link custom-button" href="https://krakozia.fr/auth/login">Connexion</a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<body>
+
+<main>
+        <div wire:id="qEQTBJIaIkyp0wt0BAkg" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;qEQTBJIaIkyp0wt0BAkg&quot;,&quot;name&quot;:&quot;shop&quot;,&quot;locale&quot;:&quot;fr&quot;,&quot;path&quot;:&quot;shop&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;89f1c837&quot;,&quot;data&quot;:{&quot;current&quot;:null,&quot;items&quot;:[]},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;items&quot;:{&quot;class&quot;:&quot;App\\Models\\Shop\\ShopItem&quot;,&quot;id&quot;:[3,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,46,47,48,49,51,54,56,58,59,60,63,64,65],&quot;relations&quot;:[&quot;promotion&quot;],&quot;connection&quot;:&quot;mysql&quot;}}},&quot;checksum&quot;:&quot;8d420775c34f68d3f20a662d91f7e1ac5548951d84112d5352fd951f44f9e1d6&quot;}}" class="container main-container">
+    <div class="page-title-container">
+        <h1 class="page-title">Boutique</h1>
+        <p class="page-subtitle">Renforcez l'équipement de votre navire</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="shop-top-container custom-card">
+                <div class="right-container">
+                    <span class="hello-message">Bonjour Invité,</span>
+                    <div class="credits-message">
+                        <span>Vous avez <span class="count">0 crédits</span></span>
+                        <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+                    </div>
+                </div>
+                <div class="left-container">
+                                            <a href="https://krakozia.fr/auth/login" class="custom-button">Connexion</a>
+                                    </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="shop-categories-card custom-card" x-data="{ tab: 'all' }">
+                <ul>
+                    <li>
+                        <a wire:click="allItems" class="pointer" :class="{ 'active': tab === 'all' }" @click="tab = 'all'">
+                            Tous les articles
+                        </a>
+                    </li>
+                                            <li>
+                            <a wire:click="selectCategory(1)" class="pointer" :class="{ 'active': tab === 'grades' }" @click="tab = 'grades'">
+                                Grades
+                            </a>
+                        </li>
+                                            <li>
+                            <a wire:click="selectCategory(2)" class="pointer" :class="{ 'active': tab === 'kits' }" @click="tab = 'kits'">
+                                Kits
+                            </a>
+                        </li>
+                                            <li>
+                            <a wire:click="selectCategory(3)" class="pointer" :class="{ 'active': tab === 'spawners' }" @click="tab = 'spawners'">
+                                Spawners
+                            </a>
+                        </li>
+                                            <li>
+                            <a wire:click="selectCategory(4)" class="pointer" :class="{ 'active': tab === 'cle' }" @click="tab = 'cle'">
+                                Clé
+                            </a>
+                        </li>
+                                            <li>
+                            <a wire:click="selectCategory(5)" class="pointer" :class="{ 'active': tab === 'divers' }" @click="tab = 'divers'">
+                                Divers
+                            </a>
+                        </li>
+                                            <li>
+                            <a wire:click="selectCategory(8)" class="pointer" :class="{ 'active': tab === 'cosmetiques' }" @click="tab = 'cosmetiques'">
+                                Cosmetiques
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12" wire:loading>
+                <div class="preloader-container">
+                    <span class="loader"></span>
+                    <div class="mt-4">
+                        <p>Chargement des données...</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="row" wire:loading.remove>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/3"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/mxH6BjaJX0bgxGei.png" alt="Chevalier [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>650</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Chevalier [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/5"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/lP2PYbMO70q8Svtk.png" alt="Marquis [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>950</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Marquis [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/7"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/pJavK9tUyyEudDjS.png" alt="Duc [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>1450</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Duc [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/8"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/xgIhdAVufzmnNG98.png" alt="Kit Enchanteur [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>300</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Enchanteur [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/9"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/TNZGhbBjfs5QW9zB.png" alt="Kit Golden [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Golden [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/10"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/YUDqkZqn1x9jmVXh.png" alt="Kit Minerais [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>400</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Minerais [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/11"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/aSEP9luoxjjKMk7y.png" alt="Kit Construction [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>300</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Construction [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/12"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/g2ZBDm5Ykg5lS3zO.png" alt="Kit Explorateur [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Explorateur [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/13"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/EyxBIeuxi5Po9moQ.png" alt="Kit Destruction [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>400</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Destruction [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/14"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/T3dvZTu40tSSrxbd.png" alt="Kit Druide [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Druide [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/15"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/tKdoVoBdyTINoATv.png" alt="Kit Alchimiste [A Vie]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Alchimiste [A Vie]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/16"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/Id0xn7H8w8U8zxdo.png" alt="Kit Tropical [A VIE]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>350</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Kit Tropical [A VIE]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/17"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/8NpfXazjCkerOeDB.png" alt="Zombie [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>300</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Zombie [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/18"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/9fwu7cst2JLBu51t.png" alt="Skeleton [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>350</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Skeleton [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/19"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/9qcjlpGvHQdLMInq.png" alt="Spider [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Spider [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/20"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/SnXIekW7GsIfWEoh.png" alt="Singe [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>500</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Singe [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/21"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/jIYpxr7LSLk35ReB.png" alt="Pig Zombie [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>450</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Pig Zombie [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/22"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/0gSJuO3RZDjpKY5q.png" alt="Golem [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>600</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Golem [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/23"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/HhKCT6vivlcckwYU.png" alt="Vache [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>200</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Vache [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/24"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/wG5PaX00ZUTWjKor.png" alt="Poule [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>200</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Poule [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/25"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/NAKGALrWjfuKVk3U.png" alt="Clé Spawner" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>300</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Clé Spawner
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/26"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/WGBrIsoDpqSlLKpu.png" alt="Clé Cobalt" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>350</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Clé Cobalt
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/27"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/EjoOXcucMN4qhPcl.png" alt="Anti-Crash-Connexion (x256)" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>150</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Anti-Crash-Connexion (x256)
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/28"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/3B3CzNyyJphZj8mj.png" alt="Obsidienne (x256)" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>300</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Obsidienne (x256)
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/29"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/73tQb34O5mHWUZRL.png" alt="Œuf de creeper (x2)" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Œuf de creeper (x2)
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/46"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/Z76muC5E9wp4HL3C.png" alt="Cosmétique Casque de Viking [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Casque de Viking [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/47"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/hphXNa3S19pXBBiM.png" alt="Cosmétique Sac de camping [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Sac de camping [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/48"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/shheJJkpf7HMCKcX.png" alt="Cosmétique Chapeau mignon [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Chapeau mignon [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/49"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/5Hg2UrZcGgjXRbJo.png" alt="Cosmétique Masque de poisson [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Masque de poisson [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/51"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/9Gaqfbz8khRHXret.png" alt="Cosmétique Tête de rhinocéros [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Tête de rhinocéros [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/54"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/VimeSRzNxNNewdFf.png" alt="Cosmétique Casque du mineur [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Casque du mineur [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/56"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/lqcTFlHBR0edPWow.png" alt="Cosmétique Chapeau Pirate [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Chapeau Pirate [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/58"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/44rFyOqoERJSiBdL.png" alt="Cosmétique Sac de Pirate [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Sac de Pirate [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/59"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/wJup7oRkOpk6fuwV.png" alt="Cosmétique Masque de Singe [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Masque de Singe [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/60"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/ypdOlGhBD9aNc3lj.png" alt="Cosmétique Chapeau du Roi [Version]" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>250</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Cosmétique Chapeau du Roi [Version]
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/63"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/07qQBks1y27xWxbc.png" alt="Titre Custom" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>600</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Titre Custom
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/64"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/YkMdIVTDW3liKzI0.png" alt="Amélioration Spawner" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>350</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Amélioration Spawner
+    </h4>
+</div>            </div>
+                    <div class="col-md-4">
+                <div x-data="{ toggle: false }" class="shop-block custom-shadow">
+    <div class="shop-article" :class="{ 'background-light' : toggle }">
+        <a href="https://krakozia.fr/shop/article/65"
+           class="zoom-image">
+            <img src="https://krakozia.fr/images/shop/qanPFbX1dwWRWF2G.png" alt="Amélioration boosters" class="img-fluid">
+        </a>
+                    <div class="article-credits">
+                <span>450</span>
+                <img src="https://krakozia.fr/images/coin.png" alt="Crédits">
+            </div>
+            </div>
+    <h4 class="article-title">
+        Amélioration boosters
+    </h4>
+</div>            </div>
+            </div>
+</div>
+<!-- Livewire Component wire-end:qEQTBJIaIkyp0wt0BAkg --></main>
+
+<footer>
+    <div class="container">
+        <div class="row justify-content-between">
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">A propos</h2>
+                    <p><strong>Krakozia</strong> est un serveur PVP/Factions en version 1.7.10 proposant un gameplay axé autour du farming ! De nombreux ajouts sont disponibles, <strong>Machines</strong>, <strong>Objets</strong> et bien d'autres !</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">Liens</h2>
+                    <div class="footer-links">
+                        <ul class="list-content">
+                            <li>
+                                <a href="https://krakozia.fr">
+                                    Accueil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/7n7kBMF" target="_blank">
+                                    Discord
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://krakozia.fr/join">
+                                    Nous-rejoindre
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://krakozia.fr/vote">
+                                    Votes
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="list-content text-right">
+                                                            <li><a href="https://krakozia.fr/page/cgv">
+                                        CGV
+                                    </a>
+                                </li>
+                                                            <li><a href="https://krakozia.fr/page/cgu">
+                                        CGU
+                                    </a>
+                                </li>
+                                                            <li><a href="https://krakozia.fr/page/mentions">
+                                        Mentions légales
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-section">
+                    <h2 class="footer-title">Boutique</h2>
+                    <p>Oh oh oh ! Pirate ! Il est temps d'utiliser votre or pour conquérir les mers !</p>
+                    <a href="https://krakozia.fr/shop" class="custom-button mt-4">
+                        <svg><use xlink:href="https://krakozia.fr/images/sprite.svg#shopping-bag"></use></svg>
+                        Boutique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container text-center">
+
+            <a href="https://krakozia.fr/" class="mt-5">
+                <img src="https://krakozia.fr/images/logo.png" width="200px" alt="Logo">
+            </a>
+
+            <p class="footer-copy">&copy; 2019 - 2024 Krakozia. Tous droits réservés. Réalisé avec  <svg class="footer-heart"><use xlink:href="https://krakozia.fr/images/sprite.svg#heart"></use></svg></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
